@@ -1,0 +1,19 @@
+{
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      {
+        "column": 88,
+        "color": "#808080"
+      }
+    ]
+  },
+  "go.formatFlags": ["--max-len=88", "--base-formatter=gofmt"],
+  "[html]": {
+    "editor.tabSize": 4
+  },
+  "prettier.tabWidth": 4,
+  "prettier.printWidth": 120
+}
