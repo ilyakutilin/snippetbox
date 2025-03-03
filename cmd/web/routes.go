@@ -69,6 +69,11 @@ func (app *application) routes() http.Handler {
 		"/user/logout",
 		protected.ThenFunc(app.userLogoutPost),
 	)
+	router.Handler(
+		http.MethodGet,
+		"/account/view",
+		protected.ThenFunc(app.accountView),
+	)
 
 	standard := alice.New(app.recoverPanic, app.logRequest, secureHeaders)
 
