@@ -65,6 +65,16 @@ func (app *application) routes() http.Handler {
 		protected.ThenFunc(app.snippetCreatePost),
 	)
 	router.Handler(
+		http.MethodGet,
+		"/account/password/update",
+		protected.ThenFunc(app.accountPasswordUpdate),
+	)
+	router.Handler(
+		http.MethodPost,
+		"/account/password/update",
+		protected.ThenFunc(app.accountPasswordUpdatePost),
+	)
+	router.Handler(
 		http.MethodPost,
 		"/user/logout",
 		protected.ThenFunc(app.userLogoutPost),
